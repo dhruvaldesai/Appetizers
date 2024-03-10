@@ -1,17 +1,13 @@
-//
-//  AppetizersApp.swift
-//  Appetizers
-//
-//  Created by Dhruval Desai on 23/02/24.
-//
-
 import SwiftUI
 
 @main
 struct AppetizersApp: App {
+    
+    @StateObject var order = Order()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppetizerTabView().environmentObject(order)
         }
     }
 }
